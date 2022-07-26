@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=wap');
+@import url('https://fonts.googleapis.com/css2?family=Blaka&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+body
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2b1055, #7597de);
+}
+header
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10000;
+}
+header .logo
+{
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+header ul 
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+    list-style: none;
+    margin-left: 20px;
+}
+header ul li a
+{
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    border-radius: 20px;
+}
+header ul li a:hover,
+header ul li a.active
+{
+    background: #fff;
+    color: #2b1055;
+}
+section
+{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1c0522, transparent );
+    z-index: 1000;
+}
+section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+section img#moon
+{
+    mix-blend-mode: screen;
+}
+section img#mountains_front
+{
+    z-index: 10;
+}
+#text
+{
+    position: absolute;
+    right: -350px;
+    color: #fff;
+    white-space: nowrap;
+    font-size: 7.5vw;  
+    z-index: 9;
+    
+}
+#btn
+{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30xp;
+    transition: 0.5s;
+    box-shadow: 0 0 30px #444;
+    display: inline-block;
+    z-index: 9;
+}
+#btn:hover
+{
+    letter-spacing: 0.25em;
+    background: var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+#btn::before
+{
+    content: '';
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+#btn span
+{
+    position: relative;
+    z-index: 1;
+    font-family: 'Blaka', cursive;
+    
+}
+#btn i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+#btn i::before
+{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 100%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+#btn:hover i::before
+{
+    left: 0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 25px 25px var(--clr);
+    
+}
+#btn i::after
+{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--clr);
+    transition: 0.5s;
+}
+#btn:hover i::after
+{
+    left: 100%;
+    transform: translateX(-50%) rotate(-45deg);
+    box-shadow: 25px -25px var(--clr);
+}
+.sec
+{
+    position: relative;
+    padding: 100px;
+    background: #1c0522;
+    
+}
+.sec h2
+{
+    font-size: 4.5em;
+    margin-bottom: 10px;
+    color: #fff;
+    font-family: 'Blaka', cursive;
+}
+.sec h1
+{
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.sec p
+{
+    font-size: 1.2em;
+    color: #fff;
+}
+.sec ul
+{
+    position: relative;
+    display: flex;
+}
+.sec li
+{
+    list-style: none;
+}
+.sec label 
+{
+    position:  relative;
+}
+.sec input[type="checkbox"]
+{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    z-index: 100;
+}
+.sec div
+{
+    position: relative;
+    height: 88px;
+    width: 86px;
+    background: #18191f;
+    color: #555;
+    display: flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    cursor: pointer;
+    margin: 0 4px;
+    border-radius: 20px;
+    box-shadow: -1px -1px 4px rgba(255, 255, 0, 0.05),
+    4px 4px 6px rgba(0, 0, 0, 0.02),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.05),
+    inset 1px 1px 1px rgba(0, 0, 0, 0.01);
+}
+.sec div::before
+{
+    content: "";
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 75px;
+    height: 38px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    background: rgba(255, 255, 255, 0.05);
+}
+.sec input[type="checkbox"]:checked~div 
+{
+    box-shadow: inset 0 0 2px rgba(255, 255, 255, 0.05),
+    inset 4px 4px 6px rgba(0, 0, 0, 0.2);
+    color:  yellow;
+    text-shadow: 0 0 15px yellow, 0 0 25px yellow;
+    animation: glow 1.5s linear
+    infinite;
+}
+.sec @keyframes glow 
+{
+    0% {filter: hue-rotate(0deg);}
+    100% { filter: hue-rotate(360deg);}
+}

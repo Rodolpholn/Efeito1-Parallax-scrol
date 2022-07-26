@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Parallax scrolling website | vanilla javascript</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" 
+        integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="./css/style.css">
+    </head>
+    <body>
+        <header>
+            <a href="#" class="logo">Projeto</a>
+            <ul>
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Work</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <section>
+            <img src="./img/stars.png" id="stars">
+            <img src="./img/moon.png" id="moon">
+            <img src="./img/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Moon Light</h2>
+            <a href="#" style="--clr:#1e9bff" id="btn"><span>Explore</span><i></i></a>
+            <img src="./img/mountains_front.png" id="mountains_front">
+        </section>
+       
+        <div class="sec" id="sec" >
+            
+            
+            
+            <h2>Parallax Scrolling Effects </h2>
+            <h1>Click and See the Magic</h1>
+            <ul>
+                <li>
+                    <input type="checkbox" />
+                    <div>P</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>a</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>r</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>a</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>l</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>l</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>a</div>
+                </li>
+                <li>
+                    <input type="checkbox" />
+                    <div>x</div>
+                </li>
+            </ul>
+            <p>
+                Lorem ipsum dolor sit amet. Est galisum minima sed natus corrupti ea iste voluptatum ut perferendis sint et consequuntur consequatur ex earum corrupti ab dolor molestiae. Eos iste omnis qui veniam ducimus 33 quisquam ratione ad laborum dolorem. Cum consequatur omnis id repudiandae nesciunt qui nulla internos et enim laboriosam et beatae quae eos iure voluptas. Qui voluptas sint id accusantium rerum eum tempora molestias aut beatae eius. Et voluptate beatae quia quisquam sit repudiandae quis vel fugit voluptatem hic omnis nihil non quia sunt!
+
+Quo quia doloremque est eveniet et placeat molestiae sit quos repudiandae non asperiores harum.<br><br> Et eligendi vero Et ipsam ut veniam sunt et tenetur et voluptatibus illum non consequatur perferendis id optio quaerat. Ea repellat omnis eum molestiae molestiae sit esse maxime quo enim veritatis sed quibusdam harum. Cum numquam eius sed deleniti vero qui dolorem numquam et consequatur expedita est ipsum dolorem non facilis voluptatibus! Ut consequatur totam ut ducimus repellat et natus similique ut beatae dolorum. Aut consequatur praesentium Aut voluptates quo autem iste. Aut voluptates nisi aut galisum consectetur ad doloribus nihil et dignissimos enim. Sed optio omnis et repellat sunt et enim et excepturi eligendi est eveniet rerum. Rem culpa quaerat non praesentium sint qui voluptatem vitae ut voluptas dolor.
+
+Non aliquid aperiam est reiciendis provident et animi voluptatem et mollitia quaerat est quia illum ut ipsa dolorem hic quos inventore! Aut Quis repellendus sed facilis dicta Et vitae sit excepturi autem ab explicabo repellat non optio galisum et perferendis voluptatem.<br><br> Vel tempora distinctio sit corrupti quas in dolorum dolor non libero natus aut veritatis doloribus sed cupiditate voluptatem. Aut officiis voluptatem est expedita nisi et voluptatem omnis ad omnis animi aut ipsam nihil aut internos veniam. Et error consequatur quo veniam accusamus eum unde quibusdam et veritatis odio. Ut ducimus mollitia ut illum pariatur Qui odio? Est repellendus aspernatur qui consectetur quia cum vero temporibus.
+            </p>
+        </div>
+
+        <script>
+            let stars = document.getElementById('stars');
+            let moon = document.getElementById('moon');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector ('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                moon.style.top = value * 1.05 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+
+            })
+        </script>
+
+            
+         </div>
+
+    </body>
+</html>
